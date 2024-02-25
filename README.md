@@ -8,4 +8,4 @@
 5) Le système convertit les indice en prompt pour l’ia
 6) L’ia reçoit les indices incis que les info sur le mot croisé
 7) L’ia génère des réponse 
-8) le système reçoit les réponses et remplis les mot croiser 
+8) Le système reçoit les réponses et remplis les mot croiser 
