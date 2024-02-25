@@ -1,5 +1,6 @@
 # Crossword
 
+## Les principes de l'application
 1) L'utilisateur peut prendre un puzzle en photo
 2) Le système détecte le mot croiser dans la photo
 3) L'utilisateur prends les phrase en photo 
