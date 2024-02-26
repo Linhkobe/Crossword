@@ -5,7 +5,7 @@ import json
 crossword_size = 10  # Set to dimension of crossword (standard 15 x 15)
 
 # 1. Loading the Image
-img = cv2.imread('Crossword\image2.jpg')
+img = cv2.imread('Crossword\image1.jpg')
 
 # 2. Convert to HSV color space to detect colors
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
