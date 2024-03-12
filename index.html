@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résolveur de Mots Croisés</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo_miage.png" alt="Logo MIAGE" id="logo-miage">
+    </header>
+
+    <main>
+        <img src="logo_corps.png" id="logo_corps">
+        <section id="upload-section">
+            <h2>Téléchargez votre puzzle de mots croisés</h2>
+            <input type="file" id="crossword-image-input" accept="image/*">
+            <button id="upload-button">Analyser l'image</button>
+        </section>
+        <section id="result-section">
+            <h2>Résultat</h2>
+            <p id="crossword-result">Votre résultat apparaîtra ici...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
