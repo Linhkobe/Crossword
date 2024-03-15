@@ -1,11 +1,27 @@
 # Crossword
 
-## Les principes de l'application
-1) L'utilisateur peut prendre un puzzle en photo
-2) Le système détecte le mot croiser dans la photo
-3) L'utilisateur prends les phrase en photo 
-4) le système détecte l’indice  dans la photo
-5) Le système convertit les indice en prompt pour l’ia
-6) L’ia reçoit les indices incis que les info sur le mot croisé
-7) L’ia génère des réponse 
-8) Le système reçoit les réponses et remplis les mot croiser 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
