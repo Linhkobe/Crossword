@@ -1,9 +1,11 @@
 # Crossword
 
-# Project Name
-
 ## Overview
-This project focuses on processing crossword puzzles from images. It involves two main steps: extracting the crossword grid into a binary matrix and detecting and processing the text for definitions.
+This branch focuses on processing crossword puzzles from images. It involves two main steps: extracting the crossword grid into a binary matrix and detecting and processing the text for definitions.
+
+### Contributors
+- TRINH Thi Thanh Thuy
+- HASSAD Zakaria
 
 ## File Descriptions
 
@@ -36,6 +38,6 @@ This project focuses on processing crossword puzzles from images. It involves tw
    - Obtain an API key from [OCR Space API](https://ocr.space/ocrapi).
    - Run `python main_definition_ocr.py` to extract text from images.
    - Process the extracted text to JSON format using:
-     - `python V1_ocr_processing.py` for version 1 JSON format. (definition-v1.json)
-     - `python V2_ocr_processing.py` for version 2 JSON format. (definition-v1.json)
+     - `python V1_ocr_processing.py` for version 1 JSON format. (`definition-v1.json`)
+     - `python V2_ocr_processing.py` for version 2 JSON format. (`definition-v1.json`)
 
