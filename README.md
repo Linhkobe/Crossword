@@ -37,7 +37,7 @@ This branch focuses on processing crossword puzzles from images. It involves two
 2. **Extracting Crossword Definitions**:
    - Obtain an API key from [OCR Space API](https://ocr.space/ocrapi).
    - Run `python main_definition_ocr.py` to extract text from images.
-   - Process the extracted text to JSON format using:
-     - `python V1_ocr_processing.py` for version 1 JSON format. (`definition-v1.json`)
-     - `python V2_ocr_processing.py` for version 2 JSON format. (`definition-v1.json`)
+   - Process the extracted text to JSON format, modify the import statement in `main_definition_ocr.py` as follows:
+     - `from V1_ocr_processing import process_ocr_text`  for version 1 JSON format. (output: `definition-v1.json`)
+     - `from V2_ocr_processing import process_ocr_text`for version 2 JSON format. (output: `definition-v1.json`)
 
