@@ -46,7 +46,7 @@ def process_ocr_text(ocr_text):
         "VERTICALEMENT": process_clues(vertical_clues, is_horizontal=False)
     }
 
-    json_filepath = 'results-json/version1.json'
+    json_filepath = 'results-json/definition-v1.json'
     with open(json_filepath, 'w', encoding='utf-8') as json_file:
         json.dump(result, json_file, ensure_ascii=False, indent=2)
 

@@ -48,7 +48,7 @@ def process_ocr_text(ocr_text):
         "VERTICALEMENT": process_clues(vertical_clues, is_horizontal=False)
     }
 
-    json_filepath = 'OCR-Text-recognition-with-Python-and-API/results-json/version2.json'
+    json_filepath = 'results-json/definition-v2.json'
     with open(json_filepath, 'w', encoding='utf-8') as json_file:
         json.dump(result, json_file, ensure_ascii=False, indent=2)
 

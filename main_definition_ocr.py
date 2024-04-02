@@ -3,8 +3,8 @@ import numpy as np
 import requests
 import io
 import json
-from V1_ocr_processing import process_ocr_text 
-# from V2_ocr_processing import process_ocr_text 
+# from V1_ocr_processing import process_ocr_text 
+from V2_ocr_processing import process_ocr_text 
 
 
 # Read the image
@@ -25,7 +25,7 @@ if file_bytes.getbuffer().nbytes <= 1024 * 1024:
     url_api = "https://api.ocr.space/parse/image"
     result = requests.post(url_api,
                     files = {path: file_bytes},
-                    data = {"apikey": "K89603096888957",  
+                    data = {"apikey": "YOUR_API_KEY",  
                             "language": "fre"})  
 
     # Decode and process the result
