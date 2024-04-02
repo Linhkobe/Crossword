@@ -1,11 +1,12 @@
-import numpy as np
 import cv2
 import json
+
+import numpy as np
 
 crossword_size = 10  # Set to dimension of crossword (standard 15 x 15)
 
 # 1. Loading the Image
-img = cv2.imread('Crossword\image1.jpg')
+img = cv2.imread('Crossword\img\image6.jpg')
 
 # 2. Convert to HSV color space to detect colors
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -63,12 +64,12 @@ for i in range(crossword_size):
 cross_dict = {"matrix binaire": cross.tolist()}
 
 # 9. Save the JSON to a file
-with open('crossword_binary_matrix.json', 'w') as json_file:
+with open('Crossword\crossword_binary_matrix.json', 'w') as json_file:
     json.dump(cross_dict, json_file, indent=4)
 
 print(cross)
 
 # 10. Display the binary image
-cv2.imshow('Binary Image', thresh2)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+# cv2.imshow('Binary Image', thresh2)
+# cv2.waitKey(0)
+# cv2.destroyAllWindows()
