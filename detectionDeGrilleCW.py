@@ -116,7 +116,7 @@ def export_to_json(matrix, filename):
 
 # Export the binary matrix to a JSON file
 if __name__ == "__main__":
-    image_path = "img/su6.jpg"  # Make sure this path is correct
+    image_path = "img/img5.jpg"  # Make sure this path is correct
     cropped_crossword = parse_grid(image_path, flag=0)
 
     if cropped_crossword is not None and cropped_crossword.size > 0:
@@ -124,7 +124,7 @@ if __name__ == "__main__":
         print(binary_matrix)
 
         # Define the path for the JSON file
-        json_filename = "crossword_binary_matrix.json"
+        json_filename = "results-json/crossword_binary_matrix.json"
         export_to_json(binary_matrix, json_filename)
     else:
         print("No crossword image could be processed.")
