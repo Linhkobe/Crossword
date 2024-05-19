@@ -1,88 +1,106 @@
 <WelcomeScreen>:
-    BoxLayout:
-        orientation: 'vertical'
-        padding: [0, '50dp']  
-        spacing: '30dp' 
-        Image:
-            source: 'kivymdCamera/logo_2.png'  # Replace with your image
-        MDRaisedButton:
-            text: 'Get Start'
-            on_release: app.root.current = 'home'
-            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
-            width: "100dp"  
-            height: "50dp"
-            font_size: 50
+	BoxLayout:
+    	orientation: 'vertical'
+    	padding: [0, '50dp']  
+    	spacing: '30dp'
+    	Image:
+        	source: 'Crossword/logo_2.png'  
+    	MDRaisedButton:
+        	text: 'Get Start'
+        	on_release: app.root.current = 'home'
+        	pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+        	width: "100dp"  
+        	height: "50dp"
+        	font_size: 50
 
 <Homescreen>:
-    MDScrollView:
-        do_scroll_x:False
-        do_scroll_y:True
-        MDBoxLayout:
-            id:mybox
-            orientation: 'vertical'
-            size_hint_y: 1
-            pos_hint:{"center_y":0.8}
-            padding:10
-            spacing:10
-
-            BoxLayout:
-                size_hint: 1, None
-                height: "50dp"
-                spacing: "10dp"
-
-            BoxLayout:
-                orientation: 'vertical'
-
-                MDRectangleFlatIconButton:
-                    icon: "arrow-left"
-                    text: "Back"
-                    theme_text_color: "Custom"
-                    text_color: 1, 1, 1, 1  # White color
-                    md_bg_color: 0, 0, 1, 1  # Blue color
-                    on_release: app.root.current = 'welcome'
-
-            
-            #canvas.before:
-                #Color:
-                    #rgba: 255/225,242/225,153/225,1
-                #Rectangle:
-                    #pos: self.pos
-                    #size: self.size
-            
-            GridLayout:
-                id: image_grid
-                cols: 4  # Set the number of columns you want
-                spacing: 10
-
-            Camera:
-                id:camera
-                resolution:(740,580)
-                play:True
-                orientation: 'landscape'
-                size_hint_y: 10 
-                height: root.height * 0.6
-                canvas.before:
-                    PushMatrix
-                    Rotate:
-                        angle: -90
-                        origin: self.center
-                canvas.after:
-                    PopMatrix
-            #MDTextField:
-                #id:name
-                #hint_text:"Nom d'image"
-                #font_size: 30
-            MDRaisedButton:
-                text:"Capture image"
-                on_release:root.captureyouface()
-                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                md_bg_color: 39/225, 229/225, 245/225, 0.8
-                width: "100dp"  
-                height: "50dp"
-                font_size: 50
-            MDList:
-                id:resultbox
-           
+	BoxLayout:
+    	orientation: 'vertical'
+    	BoxLayout:
+        	size_hint_y: None
+        	height: self.minimum_height
+        	MDRectangleFlatIconButton:
+            	icon: "arrow-left"
+            	text: "Back"
+            	theme_text_color: "Custom"
+            	text_color: 1, 1, 1, 1  
+            	md_bg_color: 0, 0, 1, 1  
+            	on_release: app.root.current = 'welcome'
+        	MDRectangleFlatIconButton:
+            	icon: "arrow-right"
+            	text: "GridScreen"
+            	theme_text_color: "Custom"
+            	text_color: 1, 1, 1, 1  
+            	md_bg_color: 0, 0, 1, 1  
+            	on_release: app.root.current = 'gridscreen'
+    	Camera:
+        	id:camera
+        	resolution:(740,580)
+        	play:True
+        	orientation: 'landscape'
+        	canvas.before:
+            	PushMatrix
+            	Rotate:
+                	angle: -90
+                	origin: self.center
+        	canvas.after:
+            	PopMatrix
+    	MDRaisedButton:
+        	text:"Capture Image"
+        	on_release:root.captureyouface()
+    	BoxLayout:
+        	id: mybox
+    	BoxLayout:
+        	id:resultbox
 
 
+<GridScreen>:
+	BoxLayout:
+    	id: mybox
+    	orientation: 'vertical'
 
+    	BoxLayout:
+        	orientation: 'horizontal'
+        	size_hint_y: None
+        	height: dp(50)
+        	MDRectangleFlatIconButton:
+            	icon: "arrow-left"
+            	text: "Back"
+            	theme_text_color: "Custom"
+            	text_color: 1, 1, 1, 1
+            	md_bg_color: 0, 0, 1, 1
+            	on_release: app.root.current = 'home'
+        	MDRaisedButton:
+            	text: "Generate grid"
+            	on_release: root.generate_grid(int(rows_input.text), int(cols_input.text))
+        	MDRaisedButton:
+            	text: "Reset grid"
+            	on_release: root.reset_grid()
+
+    	MDTextField:
+        	id: rows_input
+        	hint_text: "Enter number of rows"
+        	helper_text_mode: "on_focus"
+        	size_hint_y: None
+        	height: dp(50)
+        	pos_hint: {'center_x': 0.5}
+    	MDTextField:
+        	id: cols_input
+        	hint_text: "Enter number of columns"
+        	helper_text_mode: "on_focus"
+        	size_hint_y: None
+        	height: dp(50)
+        	pos_hint: {'center_x': 0.5}
+
+    	ScrollView:
+        	BoxLayout:
+            	id: grid_container
+            	orientation: 'vertical'
+            	size_hint_y: None
+            	height: self.minimum_height
+
+<GeneratedGrid@GridLayout>:
+	cols: 1
+	row_default_height: dp(40)
+	size_hint_y: None
+	height: self.minimum_height
