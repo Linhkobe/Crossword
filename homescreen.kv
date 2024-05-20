@@ -1,106 +1,107 @@
 <WelcomeScreen>:
-	BoxLayout:
-    	orientation: 'vertical'
-    	padding: [0, '50dp']  
-    	spacing: '30dp'
-    	Image:
-        	source: 'logo_2.png'  
-    	MDRaisedButton:
-        	text: 'Get Start'
-        	on_release: app.root.current = 'home'
-        	pos_hint: {'center_x': 0.5, 'center_y': 0.8}
-        	width: "100dp"  
-        	height: "50dp"
-        	font_size: 50
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [0, '50dp']
+        spacing: '30dp'
+        Image:
+            source: 'logo_2.png'
+        MDRaisedButton:
+            text: 'Get Start'
+            on_release: app.root.current = 'home'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            width: "100dp"
+            height: "50dp"
+            font_size: 50
 
 <Homescreen>:
-	BoxLayout:
-    	orientation: 'vertical'
-    	BoxLayout:
-        	size_hint_y: None
-        	height: self.minimum_height
-        	MDRectangleFlatIconButton:
-            	icon: "arrow-left"
-            	text: "Back"
-            	theme_text_color: "Custom"
-            	text_color: 1, 1, 1, 1  
-            	md_bg_color: 0, 0, 1, 1  
-            	on_release: app.root.current = 'welcome'
-        	MDRectangleFlatIconButton:
-            	icon: "arrow-right"
-            	text: "GridScreen"
-            	theme_text_color: "Custom"
-            	text_color: 1, 1, 1, 1  
-            	md_bg_color: 0, 0, 1, 1  
-            	on_release: app.root.current = 'gridscreen'
-    	Camera:
-        	id:camera
-        	resolution:(740,580)
-        	play:True
-        	orientation: 'landscape'
-        	canvas.before:
-            	PushMatrix
-            	Rotate:
-                	angle: -90
-                	origin: self.center
-        	canvas.after:
-            	PopMatrix
-    	MDRaisedButton:
-        	text:"Capture Image"
-        	on_release:root.captureyouface()
-    	BoxLayout:
-        	id: mybox
-    	BoxLayout:
-        	id:resultbox
-
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint_y: None
+            height: self.minimum_height
+            MDRectangleFlatIconButton:
+                icon: "arrow-left"
+                text: "Back"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                md_bg_color: 0, 0, 1, 1
+                on_release: app.root.current = 'welcome'
+            MDRectangleFlatIconButton:
+                icon: "arrow-right"
+                text: "GridScreen"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                md_bg_color: 0, 0, 1, 1
+                on_release: app.root.current = 'gridscreen'
+        Camera:
+            id: camera
+            resolution: (1280, 720)
+            play: True
+            size_hint: (1,1)
+            keep_ratio: True
+            allow_stretch: True
+            orientation: 'landscape'
+            canvas.before:
+                PushMatrix
+                Rotate:
+                    angle: -90
+                    origin: self.center
+            canvas.after:
+                PopMatrix
+        MDRaisedButton:
+            text: "Capture Image"
+            on_release: root.captureyouface()
+        BoxLayout:
+            id: mybox
+            size_hint: (1, 0.1)
+        BoxLayout:
+            id: resultbox
+            size_hint: (1, 0.1)
 
 <GridScreen>:
-	BoxLayout:
-    	id: mybox
-    	orientation: 'vertical'
-
-    	BoxLayout:
-        	orientation: 'horizontal'
-        	size_hint_y: None
-        	height: dp(50)
-        	MDRectangleFlatIconButton:
-            	icon: "arrow-left"
-            	text: "Back"
-            	theme_text_color: "Custom"
-            	text_color: 1, 1, 1, 1
-            	md_bg_color: 0, 0, 1, 1
-            	on_release: app.root.current = 'home'
-        	MDRaisedButton:
-            	text: "Generate grid"
-            	on_release: root.generate_grid(int(rows_input.text), int(cols_input.text))
-        	MDRaisedButton:
-            	text: "Reset grid"
-            	on_release: root.reset_grid()
-
-    	MDTextField:
-        	id: rows_input
-        	hint_text: "Enter number of rows"
-        	helper_text_mode: "on_focus"
-        	size_hint_y: None
-        	height: dp(50)
-        	pos_hint: {'center_x': 0.5}
-    	MDTextField:
-        	id: cols_input
-        	hint_text: "Enter number of columns"
-        	helper_text_mode: "on_focus"
-        	size_hint_y: None
-        	height: dp(50)
-        	pos_hint: {'center_x': 0.5}
-
-    	ScrollView:
-        	BoxLayout:
-            	id: grid_container
-            	orientation: 'vertical'
-            	size_hint_y: None
-            	height: self.minimum_height
+    BoxLayout:
+        id: mybox
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: None
+            height: dp(50)
+            MDRectangleFlatIconButton:
+                icon: "arrow-left"
+                text: "Back"
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                md_bg_color: 0, 0, 1, 1
+                on_release: app.root.current = 'home'
+            MDRaisedButton:
+                text: "Generate grid"
+                on_release: root.generate_grid(int(rows_input.text), int(cols_input.text))
+            MDRaisedButton:
+                text: "Reset grid"
+                on_release: root.reset_grid()
+        MDTextField:
+            id: rows_input
+            hint_text: "Enter number of rows"
+            helper_text_mode: "on_focus"
+            size_hint_y: None
+            height: dp(50)
+            pos_hint: {'center_x': 0.5}
+        MDTextField:
+            id: cols_input
+            hint_text: "Enter number of columns"
+            helper_text_mode: "on_focus"
+            size_hint_y: None
+            height: dp(50)
+            pos_hint: {'center_x': 0.5}
+        ScrollView:
+            BoxLayout:
+                id: grid_container
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
 
 <GeneratedGrid@GridLayout>:
-	cols: 1
-	row_default_height: dp(40)
-	size_hint_y: None
-	height: self.minimum_height
+    cols: 1
+    row_default_height: dp(40)
+    size_hint_y: None
+    height: self.minimum_height
