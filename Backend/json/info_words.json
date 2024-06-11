@@ -15,7 +15,7 @@
                     "J1"
                 ],
                 "taille": 10,
-                "definition": "Violettes mais non végétales."
+                "definition": "Dont on peut se contenter."
             }
         ],
         "2": [
@@ -26,7 +26,7 @@
                     "C2"
                 ],
                 "taille": 3,
-                "definition": "As du concert tôt.."
+                "definition": "Il est suffisant d'en parler"
             },
             {
                 "mot": [
@@ -34,33 +34,34 @@
                     "F2",
                     "G2",
                     "H2",
-                    "I2"
+                    "I2",
+                    "J2"
                 ],
-                "taille": 5,
-                "definition": "Héroïne bretonne."
+                "taille": 6,
+                "definition": "Léger comme tout."
             }
         ],
         "3": [
             {
                 "mot": [
                     "A3",
-                    "B3",
-                    "C3",
-                    "D3",
-                    "E3"
+                    "B3"
                 ],
-                "taille": 5,
-                "definition": "Sanguinaire"
+                "taille": 2,
+                "definition": "C'est bien familier comme petit personnel"
             },
             {
                 "mot": [
+                    "D3",
+                    "E3",
+                    "F3",
                     "G3",
                     "H3",
                     "I3",
                     "J3"
                 ],
-                "taille": 4,
-                "definition": "Pas intéressé par le progrès."
+                "taille": 7,
+                "definition": "Empile."
             }
         ],
         "4": [
@@ -68,22 +69,20 @@
                 "mot": [
                     "A4",
                     "B4",
-                    "C4",
-                    "D4",
-                    "E4",
-                    "F4",
-                    "G4"
+                    "C4"
                 ],
-                "taille": 7,
-                "definition": "Qui voit éclore ses petits"
+                "taille": 3,
+                "definition": "Vierge du Finistère"
             },
             {
                 "mot": [
-                    "I4",
-                    "J4"
+                    "E4",
+                    "F4",
+                    "G4",
+                    "H4"
                 ],
-                "taille": 2,
-                "definition": "Avec un pin cela fait un petit bien terrestre."
+                "taille": 4,
+                "definition": "Bonne conseillère."
             }
         ],
         "5": [
@@ -93,20 +92,20 @@
                     "B5",
                     "C5",
                     "D5",
-                    "E5",
-                    "F5"
+                    "E5"
                 ],
-                "taille": 6,
-                "definition": "Parler mal"
+                "taille": 5,
+                "definition": "Regardé comme réputé"
             },
             {
                 "mot": [
+                    "G5",
                     "H5",
                     "I5",
                     "J5"
                 ],
-                "taille": 3,
-                "definition": "Peintre néerlandais."
+                "taille": 4,
+                "definition": "Invention d'un amiral."
             }
         ],
         "6": [
@@ -114,43 +113,43 @@
                 "mot": [
                     "A6",
                     "B6",
-                    "C6"
+                    "C6",
+                    "D6"
                 ],
-                "taille": 3,
-                "definition": "Ne flatte pas l'odorat"
+                "taille": 4,
+                "definition": "Charpenté"
             },
             {
                 "mot": [
-                    "E6",
                     "F6",
                     "G6",
                     "H6",
                     "I6",
                     "J6"
                 ],
-                "taille": 6,
-                "definition": "On les trouve sur le chantier."
+                "taille": 5,
+                "definition": "Difficile à croire."
             }
         ],
         "7": [
             {
                 "mot": [
-                    "A7",
-                    "B7"
-                ],
-                "taille": 2,
-                "definition": "Sérieux atout"
-            },
-            {
-                "mot": [
+                    "C7",
                     "D7",
                     "E7",
                     "F7",
-                    "G7",
-                    "H7"
+                    "G7"
                 ],
                 "taille": 5,
-                "definition": "Grande épée."
+                "definition": "On clique souvent dessus"
+            },
+            {
+                "mot": [
+                    "I7",
+                    "J7"
+                ],
+                "taille": 2,
+                "definition": "Règle."
             }
         ],
         "8": [
@@ -162,39 +161,40 @@
                     "D8"
                 ],
                 "taille": 4,
-                "definition": "Produits de beauté"
+                "definition": "Pronom personnel"
             },
             {
                 "mot": [
                     "F8",
                     "G8",
                     "H8",
-                    "I8",
-                    "J8"
+                    "I8"
                 ],
-                "taille": 5,
-                "definition": "Petit rongeur."
+                "taille": 4,
+                "definition": "Pas aussi loin que cela."
             }
         ],
         "9": [
             {
                 "mot": [
+                    "A9",
+                    "B9",
                     "C9",
                     "D9",
-                    "E9",
-                    "F9"
+                    "E9"
                 ],
-                "taille": 4,
-                "definition": "Bout du monde"
+                "taille": 5,
+                "definition": "Évitera l'accord"
             },
             {
                 "mot": [
+                    "G9",
                     "H9",
                     "I9",
                     "J9"
                 ],
-                "taille": 3,
-                "definition": "Tranche de temps."
+                "taille": 4,
+                "definition": "Le service n'y est pas compris."
             }
         ],
         "10": [
@@ -203,21 +203,21 @@
                     "A10",
                     "B10",
                     "C10",
-                    "D10"
+                    "D10",
+                    "E10",
+                    "F10"
                 ],
-                "taille": 4,
-                "definition": "Langue en kilt"
+                "taille": 6,
+                "definition": "Préparant la pesée"
             },
             {
                 "mot": [
-                    "F10",
-                    "G10",
                     "H10",
                     "I10",
                     "J10"
                 ],
-                "taille": 5,
-                "definition": "Courses folles."
+                "taille": 3,
+                "definition": "Lettre grecque."
             }
         ]
     },
@@ -237,7 +237,7 @@
                     "A10"
                 ],
                 "taille": 10,
-                "definition": "Escorte."
+                "definition": "Courent sur le haricot."
             }
         ],
         "B": [
@@ -248,56 +248,56 @@
                     "B3",
                     "B4",
                     "B5",
-                    "B6",
-                    "B7",
-                    "B8"
+                    "B6"
                 ],
-                "taille": 8,
-                "definition": "Sale gamine."
+                "taille": 6,
+                "definition": "Envoies voir les bas-fonds"
+            },
+            {
+                "mot": [
+                    "B8",
+                    "B9",
+                    "B10"
+                ],
+                "taille": 3,
+                "definition": "Épaissit au piano."
             }
         ],
         "C": [
             {
                 "mot": [
                     "C1",
-                    "C2",
-                    "C3",
-                    "C4",
-                    "C5",
-                    "C6"
+                    "C2"
                 ],
-                "taille": 6,
-                "definition": "Le zèbre en est un, qu'il soit drôle ou pas"
+                "taille": 2,
+                "definition": "Indication de lieu"
             },
             {
                 "mot": [
+                    "C4",
+                    "C5",
+                    "C6",
+                    "C7",
                     "C8",
                     "C9",
                     "C10"
                 ],
-                "taille": 3,
-                "definition": "Qui justifie une mise en page."
+                "taille": 7,
+                "definition": "Mettre le blé de côté."
             }
         ],
         "D": [
             {
                 "mot": [
-                    "D3",
-                    "D4",
-                    "D5"
-                ],
-                "taille": 3,
-                "definition": "Os du merlan"
-            },
-            {
-                "mot": [
+                    "D5",
+                    "D6",
                     "D7",
                     "D8",
                     "D9",
                     "D10"
                 ],
-                "taille": 4,
-                "definition": "On est bien content de la trouver pour accrocher le bœuf."
+                "taille": 6,
+                "definition": "Aura des aspirations."
             }
         ],
         "E": [
@@ -307,35 +307,39 @@
                     "E2",
                     "E3",
                     "E4",
-                    "E5",
-                    "E6",
-                    "E7"
+                    "E5"
                 ],
-                "taille": 7,
-                "definition": "En train de se gondoler."
+                "taille": 5,
+                "definition": "Arrêt accidentel"
+            },
+            {
+                "mot": [
+                    "E9",
+                    "E10"
+                ],
+                "taille": 2,
+                "definition": "Exercice de comptabilité."
             }
         ],
         "F": [
             {
                 "mot": [
                     "F1",
-                    "F2"
+                    "F2",
+                    "F3",
+                    "F4"
                 ],
-                "taille": 2,
-                "definition": "Ancienne cité bretonne"
+                "taille": 4,
+                "definition": "Qui n'en démord pas"
             },
             {
                 "mot": [
-                    "F4",
-                    "F5",
                     "F6",
                     "F7",
-                    "F8",
-                    "F9",
-                    "F10"
+                    "F8"
                 ],
-                "taille": 7,
-                "definition": "Franchir le pas de nouveau."
+                "taille": 3,
+                "definition": "On y passe beaucoup de temps à tester."
             }
         ],
         "G": [
@@ -344,19 +348,15 @@
                     "G1",
                     "G2",
                     "G3",
-                    "G4"
-                ],
-                "taille": 4,
-                "definition": "Fromage blanc"
-            },
-            {
-                "mot": [
+                    "G4",
+                    "G5",
                     "G6",
                     "G7",
-                    "G8"
+                    "G8",
+                    "G9"
                 ],
-                "taille": 3,
-                "definition": "État côtier de l'Inde."
+                "taille": 9,
+                "definition": "Leurs toiles ne sont pas destinées aux musées."
             }
         ],
         "H": [
@@ -364,22 +364,22 @@
                 "mot": [
                     "H1",
                     "H2",
-                    "H3"
+                    "H3",
+                    "H4",
+                    "H5",
+                    "H6"
                 ],
-                "taille": 3,
-                "definition": "Liquide"
+                "taille": 6,
+                "definition": "Certains ne décollent pas de son zinc"
             },
             {
                 "mot": [
-                    "H5",
-                    "H6",
-                    "H7",
                     "H8",
                     "H9",
                     "H10"
                 ],
-                "taille": 6,
-                "definition": "Épreuve d'orthographe."
+                "taille": 3,
+                "definition": "Pied tordu."
             }
         ],
         "I": [
@@ -387,38 +387,45 @@
                 "mot": [
                     "I1",
                     "I2",
-                    "I3",
-                    "I4",
-                    "I5",
-                    "I6"
+                    "I3"
                 ],
-                "taille": 6,
-                "definition": "Grandeur type"
+                "taille": 3,
+                "definition": "Largeurs"
             },
             {
                 "mot": [
+                    "I5",
+                    "I6",
+                    "I7",
                     "I8",
                     "I9",
                     "I10"
                 ],
-                "taille": 3,
-                "definition": "Monnaie nordique."
+                "taille": 6,
+                "definition": "Ils sortent de la boîte pour travailler."
             }
         ],
         "J": [
             {
                 "mot": [
+                    "J1",
+                    "J2",
                     "J3",
                     "J4",
                     "J5",
                     "J6",
-                    "J7",
-                    "J8",
+                    "J7"
+                ],
+                "taille": 7,
+                "definition": "Elle a des sources multiples"
+            },
+            {
+                "mot": [
                     "J9",
                     "J10"
                 ],
-                "taille": 8,
-                "definition": "Proches dans un arbre."
+                "taille": 2,
+                "definition": "Sur le court avec un let."
             }
         ]
     }
