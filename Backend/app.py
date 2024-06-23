@@ -38,6 +38,7 @@ def process_grid():
             json.dump({"matrix_binaire": binary_matrix.tolist()}, f, ensure_ascii=False, indent=4)
         
         print(f"JSON result saved to {matrix_path}")
+
         return jsonify({"matrix_binaire": binary_matrix.tolist()}), 200
     except Exception as e:
         print(f"Error: {str(e)}")
@@ -58,21 +59,21 @@ def process_definition():
             json.dump(definitions, f, ensure_ascii=False, indent=4)
         
         print(f"JSON result saved to json/definition.json")
+
+        # Process words after processing the definition
+        process_words()
+
         return jsonify(definitions), 200
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
-@app.route('/process-words', methods=['POST'])
 def process_words():
     try:
         extract_words.process_words()  # Call the function to process words
-        with open('json/info_words.json', 'r', encoding='utf-8') as f:
-            info_words = json.load(f)
-        return jsonify(info_words), 200
+        print("Words processed successfully and saved to json/info_words.json")
     except Exception as e:
-        print(f"Error: {str(e)}")
-        return jsonify({"error": str(e)}), 500
+        print(f"Error processing words: {str(e)}")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

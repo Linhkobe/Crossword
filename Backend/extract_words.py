@@ -1,11 +1,5 @@
 import json
 
-with open('json/matrix.json', 'r', encoding='utf-8') as file:
-    matrix_data = json.load(file)
-
-with open('json/definition.json', 'r', encoding='utf-8') as file:
-    definitions_data = json.load(file)
-
 def is_start_of_word(matrix, i, j, direction):
     if direction == "horizontal":
         return (j == 0 or matrix[i][j - 1] == 0) and (j < len(matrix[i]) - 1 and matrix[i][j + 1] == 1)
@@ -94,9 +88,19 @@ def create_result_json(matrix, definitions):
 
     return result
 
-result_json = create_result_json(matrix_data, definitions_data)
+def process_words():
+    with open('json/matrix.json', 'r', encoding='utf-8') as file:
+        matrix_data = json.load(file)
 
-with open('json/info_words.json', 'w', encoding='utf-8') as file:
-    json.dump(result_json, file, ensure_ascii=False, indent=4)
+    with open('json/definition.json', 'r', encoding='utf-8') as file:
+        definitions_data = json.load(file)
 
-print("finished : json/info_words.json")
+    result_json = create_result_json(matrix_data, definitions_data)
+
+    with open('json/info_words.json', 'w', encoding='utf-8') as file:
+        json.dump(result_json, file, ensure_ascii=False, indent=4)
+
+    print("Finished: json/info_words.json")
+
+if __name__ == "__main__":
+    process_words()
