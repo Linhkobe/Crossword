@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify
 import os
 import process_definition_image
 import process_grid_image
-
+import extract_words  # Import the extract_words module
 
 app = Flask(__name__)
 
@@ -22,7 +22,7 @@ def upload_file():
         file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
         file.save(file_path)
         return jsonify({"message": "File uploaded successfully", "filename": filename}), 200
-    
+
 @app.route('/process-grid', methods=['POST'])
 def process_grid():
     grid_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'grid.jpg')
@@ -59,6 +59,17 @@ def process_definition():
         
         print(f"JSON result saved to json/definition.json")
         return jsonify(definitions), 200
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/process-words', methods=['POST'])
+def process_words():
+    try:
+        extract_words.process_words()  # Call the function to process words
+        with open('json/info_words.json', 'r', encoding='utf-8') as f:
+            info_words = json.load(f)
+        return jsonify(info_words), 200
     except Exception as e:
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
