@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, Image, ActivityIndicator, ScrollView, Dimensions } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import axios from 'axios';
@@ -10,6 +10,7 @@ export default function App() {
   const [definitionImage, setDefinitionImage] = useState(null);
   const [matrix, setMatrix] = useState(null);
   const [definitions, setDefinitions] = useState(null);
+  const [frenchPredictions, setFrenchPredictions] = useState(null);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState('welcome');
 
@@ -63,10 +64,22 @@ export default function App() {
     setLoading(false);
   };
 
+  const processPredictions = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get('http://192.168.1.10:5000/get-french-predictions');
+      setFrenchPredictions(response.data);
+      setPage('showFrenchPredictions');
+    } catch (error) {
+      console.error('Prediction error:', error);
+    }
+    setLoading(false);
+  };
+
   const AnimalAnimation = () => {
     const [position, setPosition] = useState(0);
 
-    React.useEffect(() => {
+    useEffect(() => {
       const interval = setInterval(() => {
         setPosition((prev) => (prev < 100 ? prev + 1 : 0));
       }, 50);
@@ -163,7 +176,10 @@ export default function App() {
             </View>
           </ScrollView>
         </View>
-        <Button title="Next" onPress={() => setPage('animalAnimation')} />
+        <Button title="Solve Puzzle" onPress={() => {
+          setPage('animalAnimation');
+          processPredictions();
+        }} />
         <Button title="Back to Home" onPress={() => setPage('welcome')} />
       </View>
     );
@@ -174,6 +190,37 @@ export default function App() {
       <View style={styles.centeredContainer}>
         <Text>Solving...</Text>
         <AnimalAnimation />
+        <Button title="Back to Home" onPress={() => setPage('welcome')} />
+      </View>
+    );
+  }
+
+  if (page === 'showFrenchPredictions') {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.title}>Here are the predicted words in French:</Text>
+        <ScrollView style={styles.predictionsScrollContainer}>
+          <View style={styles.predictionsContainer}>
+            <View style={styles.column}>
+              <Text style={styles.predictionHeader}>HORIZONTAL:</Text>
+              {frenchPredictions && Object.keys(frenchPredictions.HORIZONTAL).map((key) => (
+                <View key={key} style={styles.predictionCard}>
+                  <Text style={styles.predictionKey}>{key}</Text>
+                  <Text style={styles.predictionText}>{frenchPredictions.HORIZONTAL[key]}</Text>
+                </View>
+              ))}
+            </View>
+            <View style={styles.column}>
+              <Text style={styles.predictionHeader}>VERTICAL:</Text>
+              {frenchPredictions && Object.keys(frenchPredictions.VERTICAL).map((key) => (
+                <View key={key} style={styles.predictionCard}>
+                  <Text style={styles.predictionKey}>{key}</Text>
+                  <Text style={styles.predictionText}>{frenchPredictions.VERTICAL[key]}</Text>
+                </View>
+              ))}
+            </View>
+          </View>
+        </ScrollView>
         <Button title="Back to Home" onPress={() => setPage('welcome')} />
       </View>
     );
@@ -269,4 +316,33 @@ const styles = StyleSheet.create({
     top: '50%',
     marginTop: -10, 
   },
+  predictionCard: {
+    backgroundColor: '#f0f0f0',
+    padding: 10,
+    marginVertical: 5,
+    borderRadius: 5,
+    borderWidth: 1,
+    borderColor: '#ccc',
+  },
+  predictionKey: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginBottom: 5,
+  },
+  predictionText: {
+    fontSize: 14,
+  },
+  predictionHeader: {
+    fontWeight: 'bold',
+    fontSize: 16,
+    marginBottom: 10,
+    textAlign: 'center',
+  },
+  predictionsScrollContainer: {
+    height: height * 0.6,
+  },
+  predictionsContainer: {
+    flexDirection: 'row',
+  },
 });
+

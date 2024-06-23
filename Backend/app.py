@@ -3,7 +3,8 @@ from flask import Flask, request, jsonify
 import os
 import process_definition_image
 import process_grid_image
-import extract_words  # Import the extract_words module
+import extract_words
+import prompt_engine  # Import the prompt_engine module
 
 app = Flask(__name__)
 
@@ -68,12 +69,40 @@ def process_definition():
         print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
 
+@app.route('/process-words', methods=['POST'])
+def process_words_endpoint():
+    try:
+        process_words()
+        return jsonify({"message": "Words processed successfully"}), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 def process_words():
     try:
         extract_words.process_words()  # Call the function to process words
         print("Words processed successfully and saved to json/info_words.json")
+
+        # Process predictions after processing words
+        process_predictions()
     except Exception as e:
         print(f"Error processing words: {str(e)}")
+
+def process_predictions():
+    try:
+        print("Starting prediction process...")
+        prompt_engine.run_prompt_engine()  # Call the function to process predictions
+        print("Predictions processed successfully and saved.")
+    except Exception as e:
+        print(f"Error processing predictions: {str(e)}")
+
+@app.route('/get-french-predictions', methods=['GET'])
+def get_french_predictions():
+    try:
+        with open('json/french_predictions.json', 'r', encoding='utf-8') as f:
+            french_predictions = json.load(f)
+        return jsonify(french_predictions), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)

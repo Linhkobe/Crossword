@@ -1,0 +1,42 @@
+{
+    "HORIZONTAL": {
+        "1": "Satisfaisant",
+        "2.1": "Assez",
+        "2.2": "Léger",
+        "3.1": "Bâ",
+        "3.2": "Empilé",
+        "4.1": "Vierge",
+        "4.2": "Sage",
+        "5.1": "Vu",
+        "5.2": "Radar",
+        "6.1": "Menuisier",
+        "6.2": "Incroyable",
+        "7.1": "Lien",
+        "7.2": "Roi",
+        "8.1": "Moi",
+        "8.2": "Proche",
+        "9.1": "Éviter",
+        "9.2": "Malcompris",
+        "10.1": "Échelle",
+        "10.2": "Bêta"
+    },
+    "VERTICAL": {
+        "A": "Courir",
+        "B.1": "Navire",
+        "B.2": "Dense",
+        "C.1": "Si",
+        "C.2": "Ranger",
+        "D": "Ambition",
+        "E.1": "Occas",
+        "E.2": "Audit",
+        "F.1": "Fleg",
+        "F.2": "Ess",
+        "G": "Artistes",
+        "H.1": "Métal",
+        "H.2": "Ent",
+        "I.1": "Larges",
+        "I.2": "Employés",
+        "J.1": "Multiples",
+        "J.2": "Fa"
+    }
+}

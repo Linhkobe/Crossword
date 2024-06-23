@@ -1,0 +1,42 @@
+{
+    "HORIZONTAL": {
+        "1": "Satisfactory",
+        "2.1": "Sufficient",
+        "2.2": "Lightweight",
+        "3.1": "Baton",
+        "3.2": "Piled",
+        "4.1": "Virgin",
+        "4.2": "Counselor",
+        "5.1": "Seen",
+        "5.2": "Radar",
+        "6.1": "Joiner",
+        "6.2": "Incredible",
+        "7.1": "Link",
+        "7.2": "Sovereign",
+        "8.1": "Me",
+        "8.2": "Near",
+        "9.1": "Evade",
+        "9.2": "Misunderstood",
+        "10.1": "Scaling",
+        "10.2": "Beta"
+    },
+    "VERTICAL": {
+        "A": "Run",
+        "B.1": "Ship",
+        "B.2": "Dense",
+        "C.1": "Sign",
+        "C.2": "Set",
+        "D": "Ambition",
+        "E.1": "Casual",
+        "E.2": "Audit",
+        "F.1": "Unconcerned",
+        "F.2": "Experiment",
+        "G": "Artists",
+        "H.1": "Metal",
+        "H.2": "Sprain",
+        "I.1": "Breadths",
+        "I.2": "Employees",
+        "J.1": "Multiple",
+        "J.2": "Fault"
+    }
+}
