@@ -1,25 +1,33 @@
-# App Mobile Crossword
+# <span style="color: #006666;">App Mobile Crossword</span>
 
-## Introduction
+## <span style="color: #006666;">Introduction</span>
 Welcome to the Crossword Solver App! This application allows users to upload images of crossword grids and definitions, processes them, and displays the crossword puzzle with clues. The app is built using React Native for the frontend and Flask for the backend.
 
-## Link demo
-[![Watch the video](https://img.youtube.com/vi/tCJyifAEAJY/0.jpg)](https://www.youtube.com/watch?v=tCJyifAEAJY)
+## <span style="color: 006666;">Link DEMO on youtube</span>
+<p style="text-align: center;">
+    <a href="https://www.youtube.com/watch?v=tCJyifAEAJY" style="text-decoration: none;">
+        <span style="font-size: 20px;">Click here</span> 
+        <span style="font-size: 20px;">👇</span>
+        <br>
+        <img src="https://img.youtube.com/vi/tCJyifAEAJY/0.jpg" alt="Watch the video" width="300"/>
+    </a>
+</p>
 
-## Features
+
+## <span style="color: #006666;">Features</span>
 - Upload and process crossword grid images.
 - Upload and process crossword definition images.
 - Display the crossword grid and clues.
 - Animations to enhance user experience.
 
-## Prerequisites
+## <span style="color: #006666;">Prerequisites</span>
 - Node.js and npm installed.
 - Python and pip installed.
 - Expo CLI installed.
 
-## Setup and Run the Project
+## <span style="color: #006666;">Setup and Run the Project</span>
 
-### Steps to Clone and Setup
+### <span style="color: #006666;">Steps to Clone and Setup</span>
 
 1. **Clone the Repository**
     ```bash
@@ -46,8 +54,7 @@ Welcome to the Crossword Solver App! This application allows users to upload ima
     openai.api_key = 'YOUR_API_KEY'
     ```
 
-
-### Steps to Run the Application
+### <span style="color: #006666;">Steps to Run the Application</span>
 
 1. **Run Backend**
     ```bash
@@ -62,13 +69,9 @@ Welcome to the Crossword Solver App! This application allows users to upload ima
     cd AppCrossword
     npx expo start -c
     ```
-3. **Test by your phone**: 
-- You have to install an application "expo go" in your phone <img src="image.png" alt="expo go" width="20"/> and then you open the camera of the phone, scan the QR code in the terminal of frontend, it opens our application.
 
+3. **Test by your phone**:
+- You have to install an application "expo go" in your phone <img src="image.png" alt="expo go" width="25"/> and then you open the camera of the phone, scan the QR code in the terminal of frontend, it opens our application.
 
-### Note
+### <span style="color: #006666;">Note</span>
 - Ensure both your PC and iPhone are connected to the same Wi-Fi network.
-
-
-
-
